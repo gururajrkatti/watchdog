@@ -148,6 +148,29 @@ jobs:
       env:
         - TOXENV=py310
         - export PATH="/c/Python310:/c/Python310/Scripts:$PATH"
+        
+# Power jobs
+    - name: Python 3.7 on ppc64le
+      os: linux
+      arch: ppc64le
+      python: "3.7"
+      env: 
+        - TOXENV=py37
+        - PYTHONIOENCODING=UTF-8 # To fix ascii issue 
+    - name: Python 3.8 on ppc64le
+      os: linux
+      arch: ppc64le
+      python: "3.8"
+      env: 
+        - TOXENV=py38
+        - PYTHONIOENCODING=UTF-8 # To fix ascii issue 
+    - name: Python 3.9 on ppc64le
+      os: linux
+      arch: ppc64le
+      python: "3.9"
+      env: 
+        - TOXENV=py39
+        - PYTHONIOENCODING=UTF-8 # To fix ascii issue 
 
 before_script:
   - python -V
